@@ -38,6 +38,10 @@ module timeoracle::timeoracle {
         t.unix_ms
     }
 
+    public fun unix(t: &Timestamp): u64 {
+        t.unix_ms / 1000
+    }
+
     public fun index(t: &Timestamp): u64 {
         t.index
     }

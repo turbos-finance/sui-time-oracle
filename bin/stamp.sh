@@ -56,7 +56,8 @@ fi
 if [ -z "${unix_ms}" ]; then
     echo "Unix ms not provided as input with --unix-ms, using system time"
     # https://serverfault.com/a/151112
-    unix_ms=$(date +%s%N | cut -b1-13)
+    # unix_ms=$(date +%s%N | cut -b1-13)
+    unix_ms=$(date +%s000)
 fi
 
 echo
